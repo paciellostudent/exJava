@@ -1,7 +1,6 @@
 package exercicios;
 
 import javax.swing.JOptionPane;
-
 import funcoes.Divisao;
 import funcoes.Media;
 import funcoes.Multiplicacao;
@@ -54,7 +53,7 @@ public class Ext1Ex5 {
 				
 			}
 		}else {
-			System.out.println("A operação digitada não existe");
+			System.out.println("Digite uma operação!");
 		}
 	}
 }
