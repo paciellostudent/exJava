@@ -12,8 +12,8 @@ public class Ext1Ex1 {
 			num = e.nextInt();
 			if (num < 200 && num > 100){
 				qtd = qtd + 1;
-			};
-		};	
+			}
+		}	
 		e.close();
 		System.out.println("Há "+qtd+" números entre 100 e 200!");
 	}

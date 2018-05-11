@@ -1,6 +1,7 @@
 package exercicios;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -8,16 +9,16 @@ public class Ext1Ex3 {
 	public static void main(String[] args) {
 		List<Integer> vet = new ArrayList<Integer>();
 		Scanner ler = new Scanner(System.in);
-		int soma = 0;
-		int z = 0;
+		int z=0,k=0, soma = 0;
 		
 		do {
 			System.out.print("Escreva um número: ");
-			vet.add(ler.nextInt());
-			soma += vet.get(z);
+			k = ler.nextInt();
+			vet.add(k);
+			soma += k;
 			z = z++;
 		}
-		while(vet.get(z) != 0);
+		while(k != 0);
 		ler.close();
 		
 		System.out.println("Soma dos valores: "+soma);
@@ -26,22 +27,11 @@ public class Ext1Ex3 {
 		System.out.println();
 		
 		System.out.println("Valores em ordem crescente: ");
-		for (int i = 1; i == vet.size(); i++) {
-			int a = vet.get(i);
-			int b = vet.get(i-1);
-			int aux = 0;
-			if(a < b) {
-				aux = b;
-				b = a;
-				a = aux;
-			}
-		}
-		for (int i = 0; i == vet.size(); i++) {
-			System.out.print(vet.get(i)+", ");
-		}
+		Collections.sort(vet);
+		System.out.println(vet);
 		System.out.println();
 		
-		double media = soma/vet.size();
+		double media = soma/(vet.size()-1);
 		System.out.println("Média aritimética dos valores: "+media);
 	}
 }
