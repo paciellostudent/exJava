@@ -32,7 +32,7 @@ public class Ext1Ex6 {
 		}
 		
 		int dista = dist[0]-dist[1];
-		if(dista != 0)
+		if(dist[1] != 0)
 			JOptionPane.showMessageDialog(null, "Distancia entre os números: "+dista);
 		
 		/*for (int i = 1; i == vet.size(); i++) {
@@ -48,6 +48,29 @@ public class Ext1Ex6 {
 		JOptionPane.showMessageDialog(null, "Ordem Cres.: "+vet);*/
 		Collections.sort(vet);
 		JOptionPane.showMessageDialog(null,"Orgem cres.: "+ vet);
+		int w = 0;
+		int t = vet.get(w);
+		while (t < x)
+			w=w++;
+		int g = 0;
+		for (int i = 0; i < vet.size(); i++) {
+			t = vet.get(i);
+			if(t == x) {
+				g=g++;
+				break;
+			}
+		}
+		int z = 0;
+		t = vet.get(z);
+		while (t < x)
+			z=z++;
+		Collections.reverse(vet);
+		JOptionPane.showMessageDialog(null,"Orgem decres.: "+ vet);
+		JOptionPane.showMessageDialog(null,"Numeros menores que "+x+": "+w);
+		JOptionPane.showMessageDialog(null,"Números iguais a "+x+": "+g);
+		JOptionPane.showMessageDialog(null,"Números maiores que "+x+": "+z);
+
+
 		
 	}
 }
