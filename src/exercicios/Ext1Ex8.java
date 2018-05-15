@@ -7,7 +7,7 @@ public class Ext1Ex8 {
 		Triangulo tri = new Triangulo();
 		
 		tri.setV1(3, 5);
-		tri.setV3(5, 6);
+		tri.setV2(5, 6);
 		tri.setV3(1, 0);
 		
 		System.out.println(tri.getPerimetro());
