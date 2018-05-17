@@ -57,7 +57,7 @@ public class Triangulo {
 		int y1 = this.getV1().get(1);
 		int y2 = this.getV3().get(1);
 		
-		double lado = Math.sqrt(Math.pow((x2-x1), 2)+Math.pow((y2-y1), 2));
+		Double lado = Math.sqrt(Math.pow((x2-x1), 2)+Math.pow((y2-y1), 2));
 		return lado;
 	}
 	

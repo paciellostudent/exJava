@@ -6,10 +6,10 @@ public class Ext1Ex8 {
 	public static void main(String[] args) {
 		Triangulo tri = new Triangulo();
 		
-		tri.setV1(3, 5);
-		tri.setV2(5, 6);
-		tri.setV3(1, 0);
+		tri.setV1(5, 5);
+		tri.setV2(2, 6);
+		tri.setV3(0, 5);
 		
-		System.out.println(tri.getPerimetro());
+		System.out.printf("Perimeto do triangulo: %2f",tri.getPerimetro());
 	}
 }
