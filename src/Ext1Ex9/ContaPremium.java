@@ -6,14 +6,14 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
-public class ContaCorrente{
+public class ContaPremium{
 	private List<Double> saldo = new ArrayList<Double>();
 	private List<Integer> id = new ArrayList<Integer>();
 	
 	public void cadastrar(double valor) {
-		this.id.add(this.id.size()-1);
-		this.saldo.add(valor);
-		JOptionPane.showMessageDialog(null, "Seu id é: "+(id.size()-1));
+			this.id.add(this.id.size()-1);
+			this.saldo.add(valor);
+			JOptionPane.showMessageDialog(null, "Seu id é: "+(id.size()-1));
 	}
 	
 	private void deposita(int id,double valor){
@@ -23,19 +23,29 @@ public class ContaCorrente{
 	}
 	
 	public void depositar(int id,double valor) {
-		this.deposita(id, valor);
-		JOptionPane.showMessageDialog(null, "Valor depositado!");
+		try {
+			this.deposita(id, valor);
+			JOptionPane.showMessageDialog(null, "Valor depositado!");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	private void saca(int id,double valor){
 		double conta = this.saldo.get(id);
-		double saque = conta-(valor*1.05);
+		double saque = (conta-valor)*0.99;
 		this.saldo.add(id, saque);
 	}
 	
 	public void sacar(int id,double valor) {
-		this.saca(id, valor);
-		JOptionPane.showMessageDialog(null, "Valor sacado!");
+		try {
+			this.saca(id, valor);
+			JOptionPane.showMessageDialog(null, "Valor sacado!");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	private double saldo(int id){
@@ -48,3 +58,4 @@ public class ContaCorrente{
 		JOptionPane.showMessageDialog(null, "Seu saldo: "+df.format(this.saldo(id)));
 	}
 }
+
