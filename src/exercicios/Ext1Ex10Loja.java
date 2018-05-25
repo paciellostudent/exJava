@@ -22,6 +22,11 @@ public class Ext1Ex10Loja {
 			System.out.println(produto);
 		}
 		
+		//EXERCÍCIO 11
 		Collections.sort(produtos);
+		System.out.println("--------------------------------------------------\n Ordenado por nome ou preço: ");
+		for (Produto produto : produtos) {
+			System.out.println(produto);
+		}
 	}
 }

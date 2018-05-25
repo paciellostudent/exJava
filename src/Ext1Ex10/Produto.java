@@ -1,6 +1,6 @@
 package Ext1Ex10;
 
-public abstract class Produto implements Comparable {
+public class Produto implements Comparable<Produto> {
 	protected String nome;
 	protected Double preco;
 	
@@ -29,12 +29,18 @@ public abstract class Produto implements Comparable {
 	public String toString() {
 		return "Nome=" + nome + ", Preco=" + preco+", ";
 	}
+
+	//EXERCÍCIO 11
+	//CompareTo por nome
+	/*@Override
+	public int compareTo(Produto nome) {
+		return this.nome.compareTo(nome.getNome());
+	}*/
 	
-	public int compareTo(Produto produto2) {
-		if (!this.nome.equalsIgnoreCase(produto2.nome)) {
-            return this.nome.compareTo(produto2.nome);
-		}else {
-			return 0;
-		}
+	//CompareTo por preço
+	@Override
+	public int compareTo(Produto preco) {
+		return this.preco.compareTo(preco.getPreco());
 	}
 }
+
